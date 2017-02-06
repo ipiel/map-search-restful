@@ -1,0 +1,11 @@
+Usage: 
+
+직사각형 범위 내의 공중 화장실 목록 보기:
+http://SERVER_ADDRESS/public_toilet?fromLong=왼쪽 위 점의 경도&fromLat=왼쪽 위 점의 위도&toLong=오른쪽 아래 점의 경도&toLat=오른쪽 아래 점의 위도
+(GET method로 호출 시)
+직사각형의 왼쪽 위 점과 오른쪽 아래 점을 기준으로 그 내부에 존재하는 공중 화장실(POI)를 JSON Format으로 출력합니다.
+ 
+Database 내의 총 공중 화장실 갯수 보기:
+http://SERVER_ADDRESS/public_toilet/count
+(GET method로 호출 시)
+Database 내에 등록된 총 공중 화장실의 갯수를 보여줍니다.
