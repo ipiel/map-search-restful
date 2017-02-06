@@ -21,15 +21,15 @@ import org.springframework.test.context.junit4.SpringRunner;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class MapSearchRestfulApplicationTests {
-	
+
 	@Mock
 	ServletRegistrationBean registration;
 	@Mock
 	SpringApplication springapplication;
-	
+
 	@InjectMocks
 	private MapSearchRestfulApplication application;
-	
+
 	@Before
 	public void setUp() throws Exception {
 		MockitoAnnotations.initMocks(this);
@@ -39,14 +39,14 @@ public class MapSearchRestfulApplicationTests {
 	public void shouldReturnServletRegistrationBean() {
 		ServletRegistrationBean returnvalue;
 		returnvalue = application.h2servletRegistration();
-		
+
 		assertThat(returnvalue, instanceOf(ServletRegistrationBean.class));
 	}
 
 	@Test
 	public void shouldAddUrlMappingsWithConsole() {
 		application.h2servletRegistration();
-		
+
 		verify(registration, times(1)).addUrlMappings("/console/*");
 	}
 }

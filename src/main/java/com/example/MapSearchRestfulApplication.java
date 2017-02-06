@@ -13,11 +13,11 @@ public class MapSearchRestfulApplication {
 	public static void main(String[] args) throws Exception {
 		SpringApplication.run(MapSearchRestfulApplication.class, args);
 	}
-	
+
 	@Bean
 	public ServletRegistrationBean h2servletRegistration() {
 		registration.addUrlMappings("/console/*");
-		
+
 		return registration;
 	}
 }
